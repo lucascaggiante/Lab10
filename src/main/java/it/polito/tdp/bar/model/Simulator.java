@@ -58,8 +58,8 @@ public class Simulator {
 					.ofMinutes(this.DURATA_MIN + (int) (Math.random() * (this.DURATA_MAX - this.DURATA_MIN)));
 			double tolleranza = Math.random() * this.TOLLERANZA_MAX;
 			Event e = new Event(arrivo, EventType.ARRIVO_GRUPPO_CLIENTI, numPersone, durata, tolleranza, null);
-			this.queue.add(e);
-			arrivo = arrivo.plusMinutes(1 + (int) (Math.random() * this.T_MIN_ARRIVO_MAX));
+			this.queue.add(e);	//aggiungo l'evento alla coda
+			arrivo = arrivo.plusMinutes(1 + (int) (Math.random() * this.T_MIN_ARRIVO_MAX)); //porto avanti il tempo per l'arrivo del prossimo gruppo
 		}
 	}
 
